@@ -2,7 +2,11 @@
   <nav>
     <h3>APP NAME</h3>
     <ul>
+      <% if user_signed_in? %>
       <li><a href=""></a>BACK</li>
+      <li><%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %></li>
+    <% else %>
+      <% end %>
       </ul>
   </nav>
 </div>
