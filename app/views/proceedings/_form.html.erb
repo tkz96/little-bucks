@@ -22,6 +22,10 @@
   </div>
 
   <div>
+    <%= form.select :group_id, @group.all.collect {|u| [u.name, u.id] }, class: 'form-select' %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

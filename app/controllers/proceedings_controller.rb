@@ -12,6 +12,7 @@ class ProceedingsController < ApplicationController
   # GET /proceedings/new
   def new
     @proceeding = Proceeding.new
+    @group = current_user.groups.all
   end
 
   # GET /proceedings/1/edit
@@ -21,6 +22,7 @@ class ProceedingsController < ApplicationController
   def create
     @proceeding = Proceeding.new(proceeding_params)
     @proceeding.user_id = current_user.id
+    #@group = Group.find(params[:id])
 
     # @groups_proceedings.
 
