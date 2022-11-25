@@ -12,6 +12,7 @@ class ProceedingsController < ApplicationController
   # GET /proceedings/new
   def new
     @proceeding = Proceeding.new
+    @group = current_user.groups.all
   end
 
   # GET /proceedings/1/edit
@@ -20,9 +21,14 @@ class ProceedingsController < ApplicationController
   # POST /proceedings or /proceedings.json
   def create
     @proceeding = Proceeding.new(proceeding_params)
+    @proceeding.user_id = current_user.id
+    @group = Group.find(@proceeding.group_id)
 
     respond_to do |format|
       if @proceeding.save
+
+        @group.proceedings << @proceeding
+
         format.html { redirect_to proceeding_url(@proceeding), notice: 'Proceeding was successfully created.' }
         format.json { render :show, status: :created, location: @proceeding }
       else
@@ -64,6 +70,6 @@ class ProceedingsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def proceeding_params
-    params.require(:proceeding).permit(:user_id, :name, :amount)
+    params.require(:proceeding).permit(:name, :amount, :group_id)
   end
 end

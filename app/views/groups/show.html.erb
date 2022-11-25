@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+<div>
+<%= button_to "Destroy this group", @group, method: :delete %>
+</div>
+
 <%= render @group %>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
+<% @group.proceedings.each do |g| %>
+  <p><%= g.name %></p>
+  <p>$<%= g.amount %></p>
+<% end %>
 
-  <%= button_to "Destroy this group", @group, method: :delete %>
-</div>
+<%= link_to "New Transaction", new_proceeding_path %>
