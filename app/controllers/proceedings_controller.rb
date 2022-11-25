@@ -20,6 +20,9 @@ class ProceedingsController < ApplicationController
   # POST /proceedings or /proceedings.json
   def create
     @proceeding = Proceeding.new(proceeding_params)
+    @proceeding.user_id = current_user.id
+
+    # @groups_proceedings.
 
     respond_to do |format|
       if @proceeding.save
