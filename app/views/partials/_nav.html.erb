@@ -1,6 +1,7 @@
 <div>
-  <nav>
-    <h3>APP NAME</h3>
+  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <h3>APP NAME</h3>
     <ul>
       <% if user_signed_in? %>
       <li><%= link_to "Home", groups_path %></li>
@@ -9,5 +10,6 @@
     <% else %>
       <% end %>
       </ul>
+    </div>
   </nav>
 </div>
