@@ -17,3 +17,8 @@
 * {
     font-family: 'Proxima Nova', sans-serif;
 }
+
+.splash-screen {
+    height: 100vh;
+    justify-content: center;
+}

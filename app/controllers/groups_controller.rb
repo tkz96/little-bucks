@@ -9,7 +9,6 @@ class GroupsController < ApplicationController
   # GET /groups/1 or /groups/1.json
   def show
     @group = Group.find(params[:id])
-    #    @proceedings = current_user.proceedings.all
   end
 
   # GET /groups/new
@@ -53,7 +52,7 @@ class GroupsController < ApplicationController
     @group.destroy
 
     respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
+      format.html { redirect_to groups_path, notice: 'Group was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

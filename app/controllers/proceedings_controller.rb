@@ -29,7 +29,7 @@ class ProceedingsController < ApplicationController
 
         @group.proceedings << @proceeding
 
-        format.html { redirect_to proceeding_url(@proceeding), notice: 'Proceeding was successfully created.' }
+        format.html { redirect_to group_url(@group), notice: 'Proceeding was successfully created.' }
         format.json { render :show, status: :created, location: @proceeding }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -56,7 +56,7 @@ class ProceedingsController < ApplicationController
     @proceeding.destroy
 
     respond_to do |format|
-      format.html { redirect_to proceedings_url, notice: 'Proceeding was successfully destroyed.' }
+      format.html { redirect_to group_path, notice: 'Proceeding was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
