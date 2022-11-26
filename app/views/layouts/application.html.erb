@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="bg-gray-100">
+  <head>
+    <title>Little Bucks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+  </head>
+
+  <body>
+  <div>
+  <p class="alert"><%= alert %></p>
+  <% if !user_signed_in? %>
+
+  <% else %>
+  <%= render 'partials/nav' %>
+  <% end %>
+  <%= yield %>
+  </div>
+  </body>
+</html>

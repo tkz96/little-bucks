@@ -1,0 +1,10 @@
+<div class="flex items-center bg-white justify-between p-8 m-5" id="<%= dom_id group %>">
+  <div class="flex items-center">
+  <%= image_tag("#{group.icon}") %>
+    <div class="mx-2", style="color: #434b54">
+  <p><%= group.name %></p>
+    <%= group.created_at.strftime("%d %b %Y") %>
+    </div>
+  </div>
+  <p class="font-extrabold">$<%= group.proceedings.sum(:amount) %></p>
+</div>

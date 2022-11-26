@@ -1,27 +1,4 @@
 <a name="readme-top"></a>
-
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
 
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
@@ -65,12 +42,12 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://.org/"></a></li>
+    <li><a href="https://flowbite.com/">Flowbite</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
   </ul>
 </details>
 
@@ -92,11 +69,8 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- Can manage daily transactions
+- Group transactions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,9 +78,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://mv-cs.herokuapp.com/)
+- [Video Presentation](https://www.loom.com/share/285b5bb29232476397147c7a6ab303d4)
 
 - [Video Presentation](https://www.loom.com/share/285b5bb29232476397147c7a6ab303d4)
 
@@ -116,83 +89,42 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
+- Ruby installed
+- Postgresql installed
+- Node and NPM installed
+- git installed [In case you want to clone this repo using your terminal]
+- Any IDE or text editor that supports Ruby
 ### Setup
 
 Clone this repository to your desired folder:
+#### 1. Clone this repository or download the Zip folder:"
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+```bash command
+$ git clone https://github.com/tkz96/little-bucks.git
 ```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
+#### 2. Navigate to the location of the folder in your machine:
+```bash command
+you@your-PC-name:~$ cd little-bucks
 ```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
+#### 3. Press Enter to navigate to your local clone.
+#### 4. Install the gems:
+```bash command
+bundle install
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
+#### 5. Create database and run the necessary migration files :
+```bash command
+$ bin/rails db:create
+$ rake db:migrate
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
+#### 6 Finally you can run the server:
+```bash command
+rails s
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,11 +153,9 @@ Feel free to check the [issues page](../../issues/).
 
 <!-- SUPPORT -->
 
-## ⭐️ Show your support <a name="support"></a>
+## ⭐️ Show your support <a name="support"></a>⭐
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project, please give it a ⭐ and let me know if you want to hire me :D
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -233,9 +163,10 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+I would like to thank
 
-I would like to thank...
+- [Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for the design
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

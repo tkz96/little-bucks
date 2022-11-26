@@ -1,0 +1,34 @@
+<div class="m-5 flex flex-col items-center">
+<%= form_with(model: proceeding) do |form| %>
+  <% if proceeding.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(proceeding.errors.count, "error") %> prohibited this proceeding from being saved:</h2>
+
+      <ul>
+        <% proceeding.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="m-5">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="m-5">
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="m-5">
+    <p>Select a category</p>
+    <%= form.select :group_id, @group.all.collect {|u| [u.name, u.id] }, class: 'form-select' %>
+  </div>
+
+  <div class="m-5 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
