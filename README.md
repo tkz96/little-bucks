@@ -65,12 +65,12 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://.org/"></a></li>
+    <li><a href="https://flowbite.com/">Flowbite</a></li>
+    <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
   </ul>
 </details>
 
@@ -94,8 +94,8 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
+- Can manage daily transactions
+- Group transactions
 - **[key_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
