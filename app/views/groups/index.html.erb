@@ -2,7 +2,7 @@
 
 <div>
 
-  <h1 class="m-5 text-center text-3xl text-gray-900 font-bold">GROUPS</h1>
+  <h1 class="m-5 text-center text-3xl font-bold", style="color: #434b54">GROUPS</h1>
 
   <div id="groups">
     <% @groups.each do |group| %>
@@ -13,6 +13,6 @@
   </div>
 
   <div class="flex bottom-0 justify-center items-center", style="min-width: 100vw; background: #5fb523; color: white; position: fixed; height: 69px">
-    <%= link_to "New group", new_group_path %>
+    <%= link_to "NEW GROUP", new_group_path, class:'border px-5 py-3' %>
   </div>
 </div>
