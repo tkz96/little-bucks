@@ -78,8 +78,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://mv-cs.herokuapp.com/)
 - [Video Presentation](https://www.loom.com/share/285b5bb29232476397147c7a6ab303d4)
 
