@@ -26,6 +26,9 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'rspec-rails', '~> 6.0'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'ffi', '~> 1.15'
